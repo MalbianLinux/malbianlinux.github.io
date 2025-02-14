@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Maldocs</title>
+    <link>https://example.org/</link>
+    <description>Recent content in Introduction on Maldocs</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation Guide</title>
+      <link>https://example.org/docs/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/installation/</guid>
+      <description>&lt;h1 id=&#34;installing-malbian&#34;&gt;&#xA;  Installing Malbian:&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#installing-malbian&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Before installation make sure you have a Hypervisor where to run the ISO.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-malbian-isos&#34;&gt;&#xA;  Get Malbian-ISOs:&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#get-malbian-isos&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://sourceforge.net/projects/malbianlinux/files/images/&#34;&gt;Malbian ISOs&lt;/a&gt; are released on SourceForge.&lt;/p&gt;&#xA;&lt;h2 id=&#34;verifying-hashes&#34;&gt;&#xA;  Verifying Hashes:&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#verifying-hashes&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Hashes need to be verified:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;md5sum malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sha1sum malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sha256sum malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;MD5: 0af328bf27c06c3aff8068bc5d85551c&lt;/li&gt;&#xA;&lt;li&gt;SHA1: 8e301106ba0f7d35e7d3a7ea58544c9c8f14d3a8&lt;/li&gt;&#xA;&lt;li&gt;SHA256: 83f05605908b90224860729f8e0d775c8da98d326473ca20e389689443544f8f&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;malbian_xfce_alpha-bokken-v1-0_x86_64.iso.gz:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;MD5: c9e4694de55ccc84b94e418331ceacbd&lt;/li&gt;&#xA;&lt;li&gt;SHA1: 234d44c589a9082c51645793fea298a61f8882bb&lt;/li&gt;&#xA;&lt;li&gt;SHA256: bd970e8067ff42506ec53afa930c1c8a1ee4e0cf9570f84ee653a4cc784c9236&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;decompressing-the-file&#34;&gt;&#xA;  Decompressing the file:&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#decompressing-the-file&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd ~/Downloads&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gzip -d malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;run-malbian-in-a-kvmqemu-environment&#34;&gt;&#xA;  Run Malbian in a KVM/Qemu Environment:&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#run-malbian-in-a-kvmqemu-environment&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Move the ISO and set an image where we&amp;rsquo;ll make the installation:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tmux scripts, look &amp; feel</title>
+      <link>https://example.org/docs/tmux_scripts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/tmux_scripts/</guid>
+      <description>&lt;h1 id=&#34;tmux&#34;&gt;&#xA;  Tmux&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#tmux&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Tmux is a terminal multiplexer. It allows multiple terminal sessions to be accessed simultaneously in a single window.&lt;/p&gt;&#xA;&lt;p&gt;The most interesting feature is that Tmux decouples the programs we run from the main terminal, protecting them from accidentally disconecting. This means that if our terminal crashes or we close it by mistake, the session is still running in the background and we can then later reattach to it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

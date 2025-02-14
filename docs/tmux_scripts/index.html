@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Tmux
+  #
+
+Tmux is a terminal multiplexer. It allows multiple terminal sessions to be accessed simultaneously in a single window.
+The most interesting feature is that Tmux decouples the programs we run from the main terminal, protecting them from accidentally disconecting. This means that if our terminal crashes or we close it by mistake, the session is still running in the background and we can then later reattach to it.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/tmux_scripts/">
+  <meta property="og:site_name" content="Maldocs">
+  <meta property="og:title" content="Tmux scripts, look & feel">
+  <meta property="og:description" content="Tmux # Tmux is a terminal multiplexer. It allows multiple terminal sessions to be accessed simultaneously in a single window.
+The most interesting feature is that Tmux decouples the programs we run from the main terminal, protecting them from accidentally disconecting. This means that if our terminal crashes or we close it by mistake, the session is still running in the background and we can then later reattach to it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Tmux scripts, look &amp; feel | Maldocs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/tmux_scripts/">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.f23c1dcb1fcc8ac00398ad8ff2c13395662a39056d9775f954e1db8d22334c04.js" integrity="sha256-8jwdyx/MisADmK2P8sEzlWYqOQVtl3X5VOHbjSIzTAQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Maldocs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/installation/" class="">Installation Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tmux_scripts/" class="active">Tmux scripts, look &amp; feel</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Tmux scripts, look &amp; feel</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-status-bar">The Status bar</a></li>
+    <li><a href="#shortcuts--configurations">Shortcuts &amp; Configurations</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="tmux">
+  Tmux
+  <a class="anchor" href="#tmux">#</a>
+</h1>
+<p>Tmux is a terminal multiplexer. It allows multiple terminal sessions to be accessed simultaneously in a single window.</p>
+<p>The most interesting feature is that Tmux decouples the programs we run from the main terminal, protecting them from accidentally disconecting. This means that if our terminal crashes or we close it by mistake, the session is still running in the background and we can then later reattach to it.</p>
+<p>Out of the box, however, Tmux can be a little difficult to use; it&rsquo;s configuration might be a little clunky and it wouldnt display any information in it&rsquo;s bar. This is why Malbian ships it&rsquo;s own configuration for Tmux and it looks like this:</p>
+<p><img src="/tmux_images/tmux_general.png" alt="Image 1" /></p>
+<h2 id="the-status-bar">
+  The Status bar
+  <a class="anchor" href="#the-status-bar">#</a>
+</h2>
+<p>Malbian&rsquo;s bar display different information. On the left-hand side we have the display of the Session, Host-name and LAN ip addres of our Malbian box.</p>
+<p><img src="/tmux_images/tmux_left_side.png" alt="Image 2" /></p>
+<p>The center part of the bar would show our Windows. It will display the selected window with a special icon and color. To change the name of our window, we can use <code>PREFIX + $</code>. We can alo zoom in a pane with <code>PREFIX + z</code> and the bar would diplay an icon to tell us that we are zoomed in.</p>
+<p><img src="/tmux_images/tmux_bar_central.png" alt="Image 3" /> <img src="/tmux_images/tmux_zoomed.png" alt="Image 4" /></p>
+<p>Finally, the right-hand side will display a leaf icon that would change color when we enter our prefix key, our internet status, host connectivity, vpn status and our target.</p>
+<p>This information is useful to make sure we don&rsquo;t have internet connectivity while analyzing malware, assuring that we can&rsquo;t reach our main host, vpn status if any and the setting of a target that most of the time is just the FlareVM Ip address. This is useful so we don&rsquo;t have to constantly check for this information.</p>
+<p><img src="/tmux_images/tmux_right_side.png" alt="Image 5" /></p>
+<p><em>Note: Change&rsquo;s might be need to be done to the IP addres in ~/.local/bin/homestatus to target your router.</em></p>
+<p>To set a target we can run the command <code>settarget &quot;&lt;IP or domain&gt;&quot;</code> in the terminal. For example:</p>
+<p><img src="/tmux_images/settarget.png" alt="Image 6" /></p>
+<p>To clear the target, we can just simply run the command <code>clstarget</code> in our terminal.</p>
+<h2 id="shortcuts--configurations">
+  Shortcuts &amp; Configurations
+  <a class="anchor" href="#shortcuts--configurations">#</a>
+</h2>
+<p>Malbian&rsquo;s tmux configuration can be found in ~/.config/tmux/tmux.conf in this configuration file you will encounter all the different shortcuts that have been added/changed and you can undo the changes or make your own.</p>
+<p><strong>Common Shortcuts:</strong></p>
+<p><strong>PREFIX</strong>: <code>Control + s</code></p>
+<p>New-Window: <code>PREFIX + enter</code></p>
+<p>Split-Window (V) - <code>PREFIX + -</code></p>
+<p>Split-Window (H) - <code>PREFIX + '</code></p>
+<p>Swap-Window (L) - <code>PREFIX + {</code></p>
+<p>Swap-Window (R) - <code>PREFIX + }</code></p>
+<p>Previous-Window: <code>PREFIX + ,</code></p>
+<p>Next-Window: <code>PREFIX + .</code></p>
+<p>Kill-Window: <code>PREFIX + W</code></p>
+<p>Kill-Pane: <code>PREFIX + w</code></p>
+<p>Display-Panes: <code>PREFIX + #</code></p>
+<p>Select-Pane: <code>Control + arrows</code></p>
+<p>Select-Pane: <code>PREFIX + h,j,k,l</code></p>
+<p>Select-Next-Pane: <code>PREFIX + n</code></p>
+<p>Select-Previous-Pane: <code>PREFIX + p</code></p>
+<p>Rotate-Pane (CCW): <code>PREFIX + Control + n</code></p>
+<p>Rotate-Pane (CW): <code>PREFIX + Control + p</code></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-status-bar">The Status bar</a></li>
+    <li><a href="#shortcuts--configurations">Shortcuts &amp; Configurations</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
