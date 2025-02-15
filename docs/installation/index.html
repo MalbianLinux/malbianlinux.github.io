@@ -7,12 +7,7 @@
   Installing Malbian:
   #
 
-Before installation make sure you have a Hypervisor where to run the ISO.
-
-  Get Malbian-ISOs:
-  #
-
-Malbian ISOs are released on SourceForge.
+Make sure you have qemu and all it&rsquo;s dependencies ready to use.
 
   Verifying Hashes:
   #
@@ -40,7 +35,7 @@ SHA256: bd970e8067ff42506ec53afa930c1c8a1ee4e0cf9570f84ee653a4cc784c9236
 cd ~/Downloads
 gzip -d malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz
 
-  Run Malbian in a KVM/Qemu Environment:
+  Create a virtual disk image:
   #
 
 Move the ISO and set an image where we&rsquo;ll make the installation:">
@@ -48,23 +43,22 @@ Move the ISO and set an image where we&rsquo;ll make the installation:">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/installation/">
   <meta property="og:site_name" content="Maldocs">
-  <meta property="og:title" content="Installation Guide">
-  <meta property="og:description" content="Installing Malbian: # Before installation make sure you have a Hypervisor where to run the ISO.
-Get Malbian-ISOs: # Malbian ISOs are released on SourceForge.
+  <meta property="og:title" content="KVM/Qemu Setup">
+  <meta property="og:description" content="Installing Malbian: # Make sure you have qemu and all it’s dependencies ready to use.
 Verifying Hashes: # Hashes need to be verified:
 md5sum malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz sha1sum malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz sha256sum malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz:
 MD5: 0af328bf27c06c3aff8068bc5d85551c SHA1: 8e301106ba0f7d35e7d3a7ea58544c9c8f14d3a8 SHA256: 83f05605908b90224860729f8e0d775c8da98d326473ca20e389689443544f8f malbian_xfce_alpha-bokken-v1-0_x86_64.iso.gz:
-MD5: c9e4694de55ccc84b94e418331ceacbd SHA1: 234d44c589a9082c51645793fea298a61f8882bb SHA256: bd970e8067ff42506ec53afa930c1c8a1ee4e0cf9570f84ee653a4cc784c9236 Decompressing the file: # cd ~/Downloads gzip -d malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz Run Malbian in a KVM/Qemu Environment: # Move the ISO and set an image where we’ll make the installation:">
+MD5: c9e4694de55ccc84b94e418331ceacbd SHA1: 234d44c589a9082c51645793fea298a61f8882bb SHA256: bd970e8067ff42506ec53afa930c1c8a1ee4e0cf9570f84ee653a4cc784c9236 Decompressing the file: # cd ~/Downloads gzip -d malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz Create a virtual disk image: # Move the ISO and set an image where we’ll make the installation:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-<title>Installation Guide | Maldocs</title>
+<title>KVM/Qemu Setup | Maldocs</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://example.org/docs/installation/">
 <link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f23c1dcb1fcc8ac00398ad8ff2c13395662a39056d9775f954e1db8d22334c04.js" integrity="sha256-8jwdyx/MisADmK2P8sEzlWYqOQVtl3X5VOHbjSIzTAQ=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.2bdcd5899baa3f02b61f4af77388ff060dea1b28e86481109d62b79130284587.js" integrity="sha256-K9zViZuqPwK2H0r3c4j/Bg3qGyjoZIEQnWK3kTAoRYc=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -116,7 +110,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/installation/" class="active">Installation Guide</a>
+    <a href="/docs/quick_setup/" class="">Quick Start</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/installation/" class="active">KVM/Qemu Setup</a>
   
 
         </li>
@@ -170,7 +177,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Installation Guide</h3>
+  <h3>KVM/Qemu Setup</h3>
 
   <label for="toc-control">
     
@@ -186,10 +193,10 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#get-malbian-isos">Get Malbian-ISOs:</a></li>
     <li><a href="#verifying-hashes">Verifying Hashes:</a></li>
     <li><a href="#decompressing-the-file">Decompressing the file:</a></li>
-    <li><a href="#run-malbian-in-a-kvmqemu-environment">Run Malbian in a KVM/Qemu Environment:</a></li>
+    <li><a href="#create-a-virtual-disk-image">Create a virtual disk image:</a></li>
+    <li><a href="#boot-malbian">Boot Malbian</a></li>
     <li><a href="#credentials">Credentials:</a></li>
     <li><a href="#install-malbian-linux-on-disk">Install Malbian Linux on disk:</a></li>
   </ul>
@@ -208,12 +215,7 @@ https://github.com/alex-shpak/hugo-book
   Installing Malbian:
   <a class="anchor" href="#installing-malbian">#</a>
 </h1>
-<p>Before installation make sure you have a Hypervisor where to run the ISO.</p>
-<h2 id="get-malbian-isos">
-  Get Malbian-ISOs:
-  <a class="anchor" href="#get-malbian-isos">#</a>
-</h2>
-<p><a href="https://sourceforge.net/projects/malbianlinux/files/images/">Malbian ISOs</a> are released on SourceForge.</p>
+<p>Make sure you have qemu and all it&rsquo;s dependencies ready to use.</p>
 <h2 id="verifying-hashes">
   Verifying Hashes:
   <a class="anchor" href="#verifying-hashes">#</a>
@@ -240,15 +242,19 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd ~/Downloads
 </span></span><span style="display:flex;"><span>gzip -d malbian_xfce_alpha-bokken-v1-1_x86_64.iso.gz
-</span></span></code></pre></div><h2 id="run-malbian-in-a-kvmqemu-environment">
-  Run Malbian in a KVM/Qemu Environment:
-  <a class="anchor" href="#run-malbian-in-a-kvmqemu-environment">#</a>
+</span></span></code></pre></div><h2 id="create-a-virtual-disk-image">
+  Create a virtual disk image:
+  <a class="anchor" href="#create-a-virtual-disk-image">#</a>
 </h2>
 <p>Move the ISO and set an image where we&rsquo;ll make the installation:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd /var/lib/libvirt/images
 </span></span><span style="display:flex;"><span>sudo mv ~/Downloads/malbian_xfce_alpha-bokken-v1-1_x86_64.iso .
 </span></span><span style="display:flex;"><span>sudo qemu-img create -f qcow2 malbianImage.img 30G
-</span></span></code></pre></div><p>Boot Malbian from the ISO:</p>
+</span></span></code></pre></div><h2 id="boot-malbian">
+  Boot Malbian
+  <a class="anchor" href="#boot-malbian">#</a>
+</h2>
+<p>Boot Malbian from the ISO:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo qemu-system-x86_64 -enable-kvm -cdrom /var/lib/libvirt/images/malbian_xfce_alpha-bokken-v1-1_x86_64 -boot menu<span style="color:#f92672">=</span>on -drive file<span style="color:#f92672">=</span>malbianImage.img -m 4G -cpu host -smp <span style="color:#ae81ff">2</span> -vga virtio -display sdl,gl<span style="color:#f92672">=</span>on
 </span></span></code></pre></div><h2 id="credentials">
   Credentials:
@@ -305,10 +311,10 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#get-malbian-isos">Get Malbian-ISOs:</a></li>
     <li><a href="#verifying-hashes">Verifying Hashes:</a></li>
     <li><a href="#decompressing-the-file">Decompressing the file:</a></li>
-    <li><a href="#run-malbian-in-a-kvmqemu-environment">Run Malbian in a KVM/Qemu Environment:</a></li>
+    <li><a href="#create-a-virtual-disk-image">Create a virtual disk image:</a></li>
+    <li><a href="#boot-malbian">Boot Malbian</a></li>
     <li><a href="#credentials">Credentials:</a></li>
     <li><a href="#install-malbian-linux-on-disk">Install Malbian Linux on disk:</a></li>
   </ul>

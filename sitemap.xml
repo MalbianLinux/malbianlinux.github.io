@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/docs/quick_setup/</loc>
+  </url><url>
     <loc>https://example.org/docs/installation/</loc>
   </url><url>
     <loc>https://example.org/docs/tmux_scripts/</loc>
