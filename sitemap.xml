@@ -6,6 +6,8 @@
   </url><url>
     <loc>https://example.org/docs/installation/</loc>
   </url><url>
+    <loc>https://example.org/docs/dwm/</loc>
+  </url><url>
     <loc>https://example.org/docs/tmux_scripts/</loc>
   </url><url>
     <loc>https://example.org/docs/shipped_tools/</loc>

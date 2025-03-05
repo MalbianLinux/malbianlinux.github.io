@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Dynamic Window Manager
+  #
+
+dwm is a dynamic window manager for X. It&rsquo;s a piece of software made by the Suckless Team that manages windows in tiled, monocle and floating layouts. It&rsquo;s very minimal, fast and light weight, and comes in Malbian with a prepatched build that would allow you to have a better experience using it.
+Alongside dwm, Malbian also has the addition of st and dmenu into it&rsquo;s environment. This two programs are a good addition to the whole environment in terms of looks and execution. The simple terminal will be available as a ScratchPad and dmenu will let you search and run executable files.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/dwm/">
+  <meta property="og:site_name" content="Maldocs">
+  <meta property="og:title" content="DWM Look & Feel">
+  <meta property="og:description" content="Dynamic Window Manager # dwm is a dynamic window manager for X. It’s a piece of software made by the Suckless Team that manages windows in tiled, monocle and floating layouts. It’s very minimal, fast and light weight, and comes in Malbian with a prepatched build that would allow you to have a better experience using it.
+Alongside dwm, Malbian also has the addition of st and dmenu into it’s environment. This two programs are a good addition to the whole environment in terms of looks and execution. The simple terminal will be available as a ScratchPad and dmenu will let you search and run executable files.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>DWM Look &amp; Feel | Maldocs</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/dwm/">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.365dc4872ac0fb41d59c46e7cdec1496d41b181e5f86e079ec05b6a166377430.js" integrity="sha256-Nl3EhyrA&#43;0HVnEbnzewUltQbGB5fhuB57AW2oWY3dDA=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Maldocs</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/quick_setup/" class="">Quick Start</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/installation/" class="">KVM/Qemu Setup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dwm/" class="active">DWM Look &amp; Feel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tmux_scripts/" class="">Tmux Scripts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shipped_tools/" class="">Shipped Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>DWM Look &amp; Feel</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+    <li><a href="#sxhkd">sxhkd</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="dynamic-window-manager">
+  Dynamic Window Manager
+  <a class="anchor" href="#dynamic-window-manager">#</a>
+</h1>
+<p><a href="https://dwm.suckless.org/">dwm</a> is a dynamic window manager for X. It&rsquo;s a piece of software made by the <a href="https://suckless.org">Suckless Team</a> that manages windows in tiled, monocle and floating layouts. It&rsquo;s very minimal, fast and light weight, and comes in Malbian with a prepatched build that would allow you to have a better experience using it.</p>
+<p>Alongside dwm, Malbian also has the addition of <a href="https://st.suckless.org/">st</a> and <a href="https://dmenu.suckless.org/">dmenu</a> into it&rsquo;s environment. This two programs are a good addition to the whole environment in terms of looks and execution. The simple terminal will be available as a ScratchPad and dmenu will let you search and run executable files.</p>
+<p>Malbian uses <a href="https://github.com/torrinfail/dwmblocks">dwmblocks</a> to update it&rsquo;s status bar. This program will show the output of custom scripts that are integrated in Malbian. It displays the host connectivity status, LAN ip address, internet connectivity, date and time.</p>
+<p>There&rsquo;s a cool integration between the terminal emulators that come preinstalled in Malbian and Tmux. All you have to do is set a session in tmux:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tmux new -s Malware
+</span></span></code></pre></div><p>As a result, the environment looks as follows:</p>
+<p><img src="/dwm_images/dwm_setup.png" alt="Image 1" /></p>
+<h2 id="keyboard-shortcuts">
+  Keyboard Shortcuts
+  <a class="anchor" href="#keyboard-shortcuts">#</a>
+</h2>
+<p>For the keyboard shortcuts we&rsquo;ll have our MODKEY set as &lsquo;Mod4Mask&rsquo; which is basically the Windows Key.</p>
+<p><strong>MODEKEY = WindowsKey</strong></p>
+<p>In this environment we will be able to perform the following actions:</p>
+<p>Open a Terminal Window: <code>MODKEY + Enter</code></p>
+<p>Open a Scratchpad: <code>MODKEY + y</code></p>
+<p>Zoom In or Out of a Window: <code>MODKEY + z</code></p>
+<p>Center a Floating Window: <code>MODKEY + Shift + g</code></p>
+<p>Close a Client Window: <code>MODKEY + w</code></p>
+<p>Query dmenu: <code>MODKEY + q</code></p>
+<p>Focus stack: <code>MODKEY + j</code> or <code>MODKEY + k</code></p>
+<p>Increment the size of a Window: <code>MODKEY + Shift + j</code> or <code>MODKEY + Shift + k</code></p>
+<p>Change selected Tag: <code>MODKEY + {1...0}</code></p>
+<p>Move a Window to a designated Tag: <code>MODKEY + Shift + {1...0}</code></p>
+<p>Shift Next/Previous Tag: <code>MODKEY + Shift + n</code> or <code>MODKEY + Shift + p</code></p>
+<p>Swap Monitors: <code>MODKEY + ,</code> or <code>MODKEY + .</code></p>
+<p>Move a Window to a designated Monitor: <code>MODEKY + Shift ,</code> or <code>MODKEY + Shift + .</code></p>
+<p>Tiling Layout: <code>MODKEY + Shift + t</code></p>
+<p>Floating Layout: <code>MODKEY + Shift + f</code></p>
+<p>Monocle Layout: <code>MODKEY + Shift + m</code></p>
+<p>Toggle Layout: <code>MODKEY + Shift + Space</code></p>
+<p>Toggle Floating Window: <code>MODKEY + Tab</code></p>
+<p>Toggle Status Bar: <code>MODKEY + Shift + b</code></p>
+<p>Promote a Window: <code>MODKEY + Shift + i</code></p>
+<p>Demote a Window: <code>MODKEY + Shift + d</code></p>
+<p>Logout from DWM : <code>MODKEY + Shift + Escape</code></p>
+<h2 id="sxhkd">
+  sxhkd
+  <a class="anchor" href="#sxhkd">#</a>
+</h2>
+<p>Malbian uses <a href="https://github.com/baskerville/sxhkd">sxhkd</a> as a daemon that reacts to input events by executing commands. Some of the useful shortcuts for these commands are:</p>
+<p>Open browser: <code>MODKEY + f</code></p>
+<p>Open Rofi Menu: <code>MODKEY + Shift + q</code></p>
+<p>Open Rofi (Action Menu): <code>MODKEY + Escape</code></p>
+<p>Open Cutter: <code>MODKEY + c</code></p>
+<p>Open Ghidra: <code>MODKEY + g</code></p>
+<p>Open BurpSuite: <code>MODKEY + b</code></p>
+<p>Open Wireshark: <code>MODKEY + l</code></p>
+<p>Open Thunar: <code>MODKEY + e</code></p>
+<p>Open Calendar: <code>MODKEY + t</code></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+    <li><a href="#sxhkd">sxhkd</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
